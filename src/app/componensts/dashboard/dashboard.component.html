@@ -1,0 +1,62 @@
+<div class="container-fluid ">
+  <div class="mt-3 mb-2" style="font-size: 30px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Dashboard Screen</div>
+
+  <div class="container">
+    <span class="heading">Welcome : {{username}}</span>
+<!--
+    <span class="heading">Email : {{email}}</span> -->
+  </div>
+
+
+
+
+
+
+
+  <p>Bootstrap split buttons and dropdowns on button groups are supported with the existing dropdown directives.</p>
+
+  <div class="btn-group me-3">
+    <button type="button" class="btn btn-outline-success">Plain ol' button</button>
+    <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+      <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>Drop me</button>
+      <div class="dropdown-menu" ngbDropdownMenu>
+        <button ngbDropdownItem>One</button>
+        <button ngbDropdownItem>Two</button>
+        <button ngbDropdownItem>Four!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group me-3">
+    <button type="button" class="btn btn-primary">Split me</button>
+    <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+      <div class="dropdown-menu" ngbDropdownMenu>
+        <button ngbDropdownItem>One</button>
+        <button ngbDropdownItem>Two</button>
+        <button ngbDropdownItem>Four!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group me-3">
+    <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+      <button type="button" class="btn btn-outline-danger" ngbDropdownToggle>Select me</button>
+      <div class="dropdown-menu" ngbDropdownMenu>
+        <button ngbDropdownItem>One</button>
+        <button ngbDropdownItem>Two</button>
+        <button ngbDropdownItem>Four!</button>
+      </div>
+    </div>
+    <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+      <button type="button" class="btn btn-outline-success" ngbDropdownToggle>Or me</button>
+      <div class="dropdown-menu" ngbDropdownMenu>
+        <button ngbDropdownItem>One</button>
+        <button ngbDropdownItem>Two</button>
+        <button ngbDropdownItem>Four!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
