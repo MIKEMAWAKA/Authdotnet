@@ -13,6 +13,11 @@ export class AppComponent {
 
   constructor(private router:Router,private authService:AuthService) { }
 
+  isLoggedIdn:boolean;
+
+  checkloggedInUser(){
+    this.isLoggedIdn= this.authService.isLoggedIn();
+  }
 
   logout(){
     console.log("logout");

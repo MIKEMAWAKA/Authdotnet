@@ -13,32 +13,32 @@ export class AuthService {
   }
 
   addUsername(username:string){
-    localStorage.setItem('username',username);
+    sessionStorage.setItem('username',username);
   }
 
   addAccesToken(token:string){
-    localStorage.setItem('token',token);
+    sessionStorage.setItem('token',token);
   }
 
   addReffressToken(refreshtoken:string){
-    localStorage.setItem('rtoken',refreshtoken);
+    sessionStorage.setItem('rtoken',refreshtoken);
   }
 
   addEmail(email:string){
-    localStorage.setItem('email',email);
+    sessionStorage.setItem('email',email);
   }
 
   getAccesToken(){
-    return localStorage.getItem("token");
+    return sessionStorage.getItem("token");
   }
   getRefreshToken(){
-    return localStorage.getItem("rtoken");
+    return sessionStorage.getItem("rtoken");
   }
   getEmail(){
-    return localStorage.getItem("email");
+    return sessionStorage.getItem("email");
   }
   getUsername(){
-    return localStorage.getItem("username");
+    return sessionStorage.getItem("username");
   }
   // getAccesToken(){
   //   return localStorage.getItem("token");
@@ -59,12 +59,12 @@ export class AuthService {
   }
 
   logout(){
-    localStorage.removeItem("username");
-    localStorage.removeItem("email");
-    localStorage.removeItem("token");
-    localStorage.removeItem("rtoken");
+    sessionStorage.removeItem("username");
+    sessionStorage.removeItem("email");
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("rtoken");
     this.router.navigate(["/login"]);
-    // localStorage.clear();
+    sessionStorage.clear();
   }
 
 

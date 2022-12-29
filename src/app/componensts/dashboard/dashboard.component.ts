@@ -13,6 +13,8 @@ export class DashboardComponent implements OnInit {
 
   username:string=this.authService.getUsername()??"";
 
+  token:string = this.authService.getAccesToken()??"";
+
   email:string = this.authService.getEmail()??"";
   ngOnInit(): void {
     if(!this.authService.isLoggedIn()){

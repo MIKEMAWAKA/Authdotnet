@@ -14,6 +14,7 @@ export interface LoginResponseModel {
 
   token:string,
   name:string,
+  email:string,
   refreshToken:string,
   expiration:string,
   username:string,

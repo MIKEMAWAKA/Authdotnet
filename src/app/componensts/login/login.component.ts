@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
           this.auth.addAccesToken(res.token);
           this.auth.addReffressToken(res.refreshToken);
           this.auth.addUsername(res.username);
-           this.auth.addEmail(this.frm.value['username']);
+           this.auth.addEmail(res.email);
 
           console.log(res);
           console.log(this.frm.value['username']);
