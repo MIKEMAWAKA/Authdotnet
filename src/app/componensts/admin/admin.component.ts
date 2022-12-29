@@ -11,15 +11,27 @@ import { ProtectedService } from 'src/app/service/protected.service';
 export class AdminComponent implements OnInit {
 
 
-  constructor(private router:Router,private authService:AuthService,private protectedService:ProtectedService) { }
 
-  username:string=this.authService.getUsername()??"";
+  constructor(private protectedService:ProtectedService) {
+    
+  }
 
-  email:string = this.authService.getEmail()??"";
+  //we will intercept each page request and append http header with access token with each request
+
   ngOnInit(): void {
-    if(!this.authService.isLoggedIn()){
-      this.router.navigate(['/login']);
-    }
+    this.protectedService.getAdminData().subscribe({
+      next:(res)=>{
+        console.log(res);
+        console.log("from admin no error message")
+
+      },
+      error:(err)=>{
+        console.log(err);
+        console.log("message data");
+
+      }
+    })
+
   }
 
 }

@@ -1,3 +1,4 @@
+import { Status } from './status';
 
 
 export interface LoginReqModel {
@@ -9,7 +10,7 @@ export interface LoginReqModel {
 }
 
 
-export interface LoginResponseModel {
+export interface LoginResponseModel extends Status{
 
 
   token:string,
@@ -18,7 +19,7 @@ export interface LoginResponseModel {
   refreshToken:string,
   expiration:string,
   username:string,
-  message:string,
-  statusCode:number,
+  // message:string,
+  // statusCode:number,
 
 }

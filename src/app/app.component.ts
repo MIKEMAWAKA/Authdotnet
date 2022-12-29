@@ -9,14 +9,19 @@ import { AuthService } from './service/auth.service';
 })
 export class AppComponent {
   title = 'Authdotnet';
+  roles = "User";
 
 
-  constructor(private router:Router,private authService:AuthService) { }
+  constructor(private router:Router,private authService:AuthService) {
+    authService.getUserRole();
+    console.log( `User role :${authService.getUserRole()}`)
+   }
 
   isLoggedIdn:boolean;
 
   checkloggedInUser(){
     this.isLoggedIdn= this.authService.isLoggedIn();
+    this.roles = this.authService.getUserRole();
   }
 
   logout(){
